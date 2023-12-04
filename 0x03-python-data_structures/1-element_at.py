@@ -6,4 +6,4 @@ def element_at(my_list, idx):
         return None
     else:
         for x in range(len(my_list)):
-            return(my_list[x - 2])
+            return(my_list[idx])
