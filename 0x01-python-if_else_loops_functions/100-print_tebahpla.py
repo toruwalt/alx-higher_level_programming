@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-print("Hi")
-for letter in range(ord('a'), ord('z')):
-    #print("{}".format(chr(letter)), end="")
-    str =+ letter
-print(str)
+for char in reversed(range(97, 123)):
+    if char % 2 != 1:
+        print(chr(char))
+    else:
+        char -= 32
+        print(chr(char))
