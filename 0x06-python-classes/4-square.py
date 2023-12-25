@@ -10,7 +10,8 @@ class Square:
     def size(self):
         return self.__size
 
-    """A size attribute setter that checks if value is an integer and is greater than 0, then sets the size to the value"""
+    """A size attribute setter that checks if value """
+    """is an integer and is greater than 0, then sets the size to the value"""
     @size.setter
     def size(self, value):
         if (type(value) != int):
