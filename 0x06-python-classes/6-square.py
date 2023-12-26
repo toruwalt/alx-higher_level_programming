@@ -1,6 +1,14 @@
 #!/usr/bin/python3
+
 """Defines a class"""
+
+
 class Square:
+
+    """
+    The getter of the private attribute size
+    """
+
     @property
     def size(self):
         self.__self = self
@@ -26,6 +34,10 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+
+    """
+    The getter of the private attribute position
+    """
 
     @property
     def position(self):
@@ -54,11 +66,37 @@ class Square:
     Initializes every instance
 
     Args:
-        
+
         size(int) - The size of the square
         position(tuple) - A tuple
     """
-    
-    def __init__(self, size=0, position=(0,0)):
+
+    def __init__(self, size=0, position=(0, 0)):
+        self.__size = size
+        self.__position = position
+
+    """
+    Calcualtes the area of the square
+
+    Return:
+        The calculated area is returned
+    """
+
+    def area(self):
+        return self.__size * self.__size
+
+    """
+    Prints the square in stdout with character #
 
 
+    """
+    def my_print(self):
+        if self.__size != 0:
+            for i in range(0, self.__size):
+                for j in range(0, self.__position[0]):
+                    print(" ", end='')
+                for k in range(0, self.__size):
+                    print('#', end='')
+                print("")
+        else:
+            print("")
