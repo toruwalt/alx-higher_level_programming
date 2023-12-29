@@ -11,7 +11,7 @@ class Square:
 
     @property
     def size(self):
-        self.__self = self
+        return (self.__size)
 
     """
     A setter of the private attribute size
@@ -41,7 +41,7 @@ class Square:
 
     @property
     def position(self):
-        self.__position = position
+        return (self.__position)
 
     """
     A setter for the position property
@@ -92,6 +92,8 @@ class Square:
     """
     def my_print(self):
         if self.__size != 0:
+            for i in range(0, self.__position[1]):
+                print("")
             for i in range(0, self.__size):
                 for j in range(0, self.__position[0]):
                     print(" ", end='')
