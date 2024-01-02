@@ -4,21 +4,26 @@
     Raises:
     TypeError
 """
+
+
 def matrix_divided(matrix, div):
 
     """
     Apple
     """
+
+    x = "matrix must be a matrix (list of lists) of integers/floats"
     if type(matrix) != list:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(x)
     for row in matrix:
         if type(row) != list:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError(x)
         for num in row:
             if type(num) != int and type(num) != float:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+
+                raise TypeError(x)
     all_equal = all(len(row) == len(matrix[0]) for row in matrix)
-    if all_equal != True:
+    if all_equal is not True:
         raise TypeError("Each row of the matrix must have the same size")
     if type(div) != int and type(div) != float:
         raise TypeError("div must be a number")
