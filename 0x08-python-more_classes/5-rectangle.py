@@ -30,8 +30,7 @@ class Rectangle:
 
     def __del__(self):
         """defines when a rectangle is destroyed"""
-        bye_text = "Bye rectangle..."
-        return bye_text
+        print("Bye rectangle...")
 
     @property
     def width(self):
