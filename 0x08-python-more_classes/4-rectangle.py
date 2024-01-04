@@ -25,12 +25,8 @@ class Rectangle:
 
     def __repr__(self):
         """defines a rectangle as a string for debugging"""
-        if self.__width == 0 or self.__height == 0:
-            return ("")
-        rows = [''.join(['#' for _ in range(self.width)])
-                for _ in range(self.height)]
-        return '\n'.join(rows)
-
+        i = "Rectangle({}, {})".format(self.__width, self.__height)
+        return i
 
     @property
     def width(self):
