@@ -17,8 +17,8 @@ class Rectangle:
 
     def __str__(self):
         """defines a rectangle as a human-readable string."""
-        rows = [''.join(['#' for _ in range(self.__width)])
-                for _ in range(self.__height)]
+        rows = [''.join(['#' for _ in range(self.width)])
+                for _ in range(self.height)]
         return '\n'.join(rows)
 
     @property
