@@ -7,4 +7,4 @@ def inherits_from(obj, a_class):
     x = type(obj)
     y = type(a_class)
     if issubclass(x, y):
-        return type(obj).__name__
+        return True
