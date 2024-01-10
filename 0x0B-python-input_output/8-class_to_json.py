@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""Returns the dictionary description with simple data structure
-(list, dictionary, string, integer and boolean)
-for JSON serialization of an object
-"""
+"""Returns the dict description with JSON serialization of an object"""
 import json
 
 
