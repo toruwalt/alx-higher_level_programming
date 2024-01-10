@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Returns the dict description with JSON serialization of an object"""
-import json
 
 
 def class_to_json(obj):
