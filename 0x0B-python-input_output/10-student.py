@@ -11,6 +11,7 @@ class Student:
 
     """Retrieves a dictionary representation of a Student instance"""
     def to_json(self, attrs=None):
+<<<<<<< HEAD
         if attrs is None:
             attrs = ["first_name", "last_name", "age"]
         elif type(attrs) is not list:
