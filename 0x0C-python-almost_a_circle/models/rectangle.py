@@ -79,7 +79,7 @@ class Rectangle(Base):
     @property
     def y(self):
         """Getter and setter of y"""
-        return self.y
+        return self.__y
 
     @y.setter
     def y(self, value):
@@ -88,7 +88,7 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("y must be >= 0")
         else:
-            self.y = value
+            self.__y = value
 
     def area(self):
         """Returns the area value of the Rectangle instance."""
