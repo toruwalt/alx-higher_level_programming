@@ -30,11 +30,13 @@ class Rectangle(Base):
             self.__y = y
 
     def __str__(self):
+        """Return the print() and str() representation of the Rectangle."""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.__x, self.__y, self.__width, self.__height))
 
     @property
     def width(self):
+        """Getter and Setter of width"""
         return self.__width
 
     @width.setter
@@ -48,6 +50,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Getter and setter of height"""
         return self.__height
 
     @height.setter
@@ -61,6 +64,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Getter and setter of x"""
         return self.__x
 
     @x.setter
@@ -74,6 +78,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Getter and setter of y"""
         return self.__y
 
     @y.setter
