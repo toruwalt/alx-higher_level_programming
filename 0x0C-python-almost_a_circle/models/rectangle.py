@@ -20,7 +20,7 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         elif type(y) != int:
             raise TypeError("y must be an integer")
-        elif y < 0:
+        elif y <= 0:
             raise ValueError("y must be >= 0")
         else:
             super().__init__(id)
