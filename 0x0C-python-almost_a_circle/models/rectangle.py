@@ -6,11 +6,28 @@ from models.base import Base
 class Rectangle(Base):
     """Inherits from Base Class"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        elif width <= 0:
+            raise ValueError("width must be >= 0")
+        elif type(height) != int:
+            raise TypeError("height must be an integer")
+        elif height <= 0:
+            raise ValueError("height must be >= 0")
+        elif type(x) != int:
+            raise TypeError("x must be an integer")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
+        elif type(y) != int:
+            raise TypeError("y must be an integer")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            super().__init__(id)
+            self.__width = width
+            self.__height = height
+            self.__x = x
+            self.__y = y
 
     def __str__(self):
         """Return the print() and str() representation of the Rectangle."""
@@ -62,7 +79,7 @@ class Rectangle(Base):
     @property
     def y(self):
         """Getter and setter of y"""
-        return self.__y
+        return self.y
 
     @y.setter
     def y(self, value):
@@ -71,7 +88,7 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("y must be >= 0")
         else:
-            self.__y = value
+            self.y = value
 
     def area(self):
         """Returns the area value of the Rectangle instance."""
