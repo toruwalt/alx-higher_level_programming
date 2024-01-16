@@ -41,3 +41,13 @@ class Square(Rectangle):
                     self.x = value
                 if key == "y":
                     self.y = value
+
+        @property
+        def size(self):
+            """Get/set the size of the Square."""
+            return self.width
+
+        @size.setter
+        def size(self, value):
+            self.width = value
+            self.height = value
