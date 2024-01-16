@@ -83,12 +83,11 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        if type(value) != int:
+        if (type(value) is not int):
             raise TypeError("y must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
-        else:
-            self.__y = value
+        self.__y = value
 
     def area(self):
         """Returns the area value of the Rectangle instance."""
