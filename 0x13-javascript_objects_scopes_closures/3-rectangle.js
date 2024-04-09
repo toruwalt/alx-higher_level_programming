@@ -7,6 +7,16 @@ class Rectangle {
       this.height = h;
     }
   }
+
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      for (let j = 0; j < this.width; j++) {
+        const x = 'X';
+        process.stdout.write(x);
+      }
+      process.stdout.write('\n');
+    }
+  }
 }
 
 module.exports = Rectangle;
