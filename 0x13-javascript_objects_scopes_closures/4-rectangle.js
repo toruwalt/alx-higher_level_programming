@@ -19,23 +19,14 @@ class Rectangle {
   }
 
   double () {
-    for (let i = 0; i < (this.height * 2); i++) {
-      for (let j = 0; j < (this.width * 2); j++) {
-        const x = 'X';
-        process.stdout.write(x);
-      }
-      process.stdout.write('\n');
-    }
+    this.height = this.height * 2;
+    this.width = this.width * 2;
   }
 
   rotate () {
-    for (let i = 0; i < this.width; i++) {
-      for (let j = 0; j < this.height; j++) {
-        const x = 'X';
-        process.stdout.write(x);
-      }
-      process.stdout.write('\n');
-    }
+    const swap = this.height;
+    this.height = this.width;
+    this.width = swap;
   }
 }
 
