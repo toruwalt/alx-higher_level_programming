@@ -12,4 +12,4 @@ if __name__ == "__main__":
     value = 'X-Request-Id'
 
     r = requests.get(url)
-    print(r.headers[value])
+    print(r.headers.get(value))
