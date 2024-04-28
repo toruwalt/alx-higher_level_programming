@@ -5,10 +5,14 @@ import requests
 
 
 if __name__ == '__main__':
-#    try:
+    try:
         letter = sys.argv[1]
         lll = {'q':letter}
         url = 'http://0.0.0.0:5000/search_user'
         r = requests.post(url, data=lll)
         m = r.json()
         print("[{}] {}".format(m["id"], m["name"]))
+    except (KeyError, IndexError):
+        print("No result")
+    except json.JSONDecodeError:
+        print("Not a valid JSON")
