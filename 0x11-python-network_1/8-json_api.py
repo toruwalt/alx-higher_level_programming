@@ -14,5 +14,5 @@ if __name__ == '__main__':
         print("[{}] {}".format(m["id"], m["name"]))
     except (KeyError, IndexError):
         print("No result")
-    except json.JSONDecodeError:
+    except JSONDecodeError:
         print("Not a valid JSON")
